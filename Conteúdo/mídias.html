@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../../css/formatação.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias</title>
+</head>
+<body>
+    <main>
+        <h1>Mídias</h1>
+        <hr>
+        <article>
+            <h2>Imagens dinâmicas</h2>
+            <p>Abra o site em dispositivos diferentes ou diminua a resolução do navegador.</p>
+            <p>A ordem das imagens deve ser sempre do <strong>menor</strong> para o <strong>maior!</strong></p>
+            <p id="precode">
+                <code>
+                    &lsaquo;source media="(max-width: 760px)" srcset="imagens/foto-p.png" type="image/png"&rsaquo;<br>
+                    &lsaquo;source media="(max-width: 1060px)" srcset="imagens/foto-m.png" type="image/png"&rsaquo;<br>
+                    &lsaquo;img src="imagens/foto-g.png" alt="foto grande"&rsaquo;<br>
+                </code>
+            </p>
+            <picture>
+                <source media="(max-width: 760px)" srcset="imagens/foto-p.png" type="image/png">
+                <source media="(max-width: 1060px)" srcset="imagens/foto-m.png" type="image/png">
+                <img src="imagens/foto-g.png" alt="foto grande">
+            </picture>
+        </article>
+        <h2>Áudio</h2>
+        <ul>
+            <dt>Formatos suportados:</dt>
+            <dd>mpeg, wav, ogg;</dd>
+        </ul>
+        <h3>Formato único</h3>
+        <audio src="audios/County-Lines_Telecasted.mp3" controls ></audio>
+        <!--MP3 WAV OGG-->
+        <h3>Vários formatos</h3>
+        <audio controls preload="none" loop>
+            <source src="County-Lines_Telecasted.mp3" type="audio/mpeg">
+            <source src="audios/County-Lines_Telecasted.mp3" type="audio/ogg">
+            <source src="audios/County-Lines_Telecasted.mp3" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir o audio <a href="audios/County-Lines_Telecasted.mp3">Baixar música</a></p>
+        </audio>
+        <h2>Vídeo</h2>
+        <ul>
+            <dt>Tipos de vídeos suportados:</dt>
+            <dd>mp4, m4v, webm, ogv;</dd>
+        </ul>
+        <p>Este vídeo está hospedado no meu próprio servidor.</p>
+        <h3>Formato único</h3>
+        <video src="vídeos/Pexels Videos.mp4" width="400px" controls></video>
+        <h3>Vários formatos</h3>
+        <video controls width="400px">
+            <source src="vídeos/Pexels Videos.mp4" type="video/mp4">
+            <source src="vídeos/Pexels Videos.webm" type="video/webm">
+            <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+        </video>
+        <h3>Vídeos incorporados</h3>
+        <iframe width="400px" height="226px" src="https://www.youtube.com/embed/QbhsMLD9Hb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </main>
+</body>
+</html>
